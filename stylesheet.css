@@ -1,0 +1,870 @@
+/* Utils */
+.scrollable-container {
+	height: 50px;
+	/* Set a fixed height */
+	width: 70px;
+	/* Set a fixed width */
+	border: 1px solid #ccc;
+	padding: 10px;
+	overflow: auto;
+	overflow-y: auto;
+	/* Add vertical scrollbar only when needed */
+}
+
+.scrollable-cell {
+	vertical-align: top;
+	/* */
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 15px;
+	color: #48DA9B;
+
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.purple {
+	color: #837c9a;
+}
+.active_style{
+
+}
+
+.login_block {
+	margin: 25px 30px;
+}
+
+.login_block h1 {
+	margin-left: -5px;
+	font-weight: 200;
+}
+
+.last.login_block {
+	margin-bottom: 110px;
+}
+
+.block {
+	margin: 25px 30px;
+}
+
+.block h1 {
+	margin-left: -5px;
+	font-weight: 200;
+}
+
+.last.block {
+	margin-bottom: 110px;
+}
+
+.horizontal_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.horizontal_list li {
+	float: left;
+}
+
+.horizontal_list li:before {
+	content: none;
+}
+
+.horizontal_list li {
+	padding-left: 0;
+	text-indent: 0;
+}
+
+.horizontal_line {
+	margin: 34px auto 0;
+	width: min(100%, 720px);
+	display: flex;
+	align-items: center;
+}
+
+.line_left,
+.line_right {
+	border-top: 1px solid #434247;
+	flex: 1 1 0;
+}
+
+.left_circle,
+.central_circle,
+.right_circle {
+	background: rgb(69, 68, 73);
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 50px;
+	flex: 0 0 auto;
+}
+
+.left_circle,
+.right_circle {
+	width: 13px;
+	height: 13px;
+}
+
+.central_circle {
+	width: 26px;
+	height: 26px;
+}
+
+/* Main tags */
+
+body {
+	background: url(images/black_twill.png) repeat;
+	/*margin: 0;*/
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	color: #48DA9B;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 300;
+	margin: 20px 0;
+}
+
+h2 {
+	font-size: 28px;
+	margin: 32px 0 24px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 25px 0;
+	padding-left: 20px;
+	border-left: 2px solid #48DA9B;
+}
+
+blockquote,
+p,
+a,
+li {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: #e4e3e8;
+}
+
+a:focus {
+	outline: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	padding-left: 1em;
+	text-indent: -.7em;
+}
+
+li:before {
+	content: "• ";
+	color: #837c9a;
+	font-size: 20px;
+	padding-right: 8px;
+}
+
+/* Containers size */
+
+#main_container {
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	color: lime;
+}
+
+.top_action_bar {
+	width: 100%;
+	min-height: 45px;
+	padding-top: 8px;
+}
+
+.main-content {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+}
+
+#header {
+	height: 130px;
+	border-bottom: 1px solid #403F44;
+}
+
+.header_logotype_container {
+	width: 260px;
+	height: 130px;
+	border-right: 1px solid #403F44;
+	float: left;
+}
+
+.header_menu_container {
+	height: 130px;
+	width: 699px;
+	float: left;
+}
+
+.header_menu_container a {
+	font-family: 'Lato', Helvetica, sans-serif;
+}
+
+#left_col {
+	flex: 0 0 245px;
+	position: relative;
+	transition: flex-basis 0.25s ease, width 0.25s ease, min-width 0.25s ease;
+}
+
+#content_container {
+	flex: 1;
+	min-width: 0;
+	border-left: 1px solid #403F44;
+}
+
+#exp_holding {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	width: min(100%, 940px);
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#chart_div {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto 10px;
+}
+
+	width: 100%;
+	height: 60px;
+	border-top: 1px solid #403F44;
+}
+
+#aW {
+	color: white;
+}
+
+#aG {
+	color: lime;
+}
+
+/* HEADER */
+
+.logotype_name {
+	text-transform: uppercase;
+	font-size: 32px;
+	margin: 43px 0 0;
+}
+
+.logotype_occupation {
+	text-transform: uppercase;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #5ce2af;
+	font-size: 12px;
+	letter-spacing: 2px;
+	padding-left: 7px;
+}
+
+.download_print_buttons {
+	width: auto;
+	height: 45px;
+	float: right;
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+
+.download_print_buttons li {
+	float: none;
+}
+
+.download_print_buttons a {
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-style: italic;
+	line-height: 45px;
+	padding: 0 17px;
+	display: block;
+	background: #353638;
+}
+
+.download_print_buttons a:hover {
+	background: #020609;
+}
+
+.download_print_buttons .icon {
+	color: #02070a;
+	padding-right: 6px;
+	font-style: normal;
+	font-size: 18px;
+}
+
+.icon-angle-double-right {
+	position: relative;
+	top: 2px;
+}
+
+.download_print_buttons a:hover .icon {
+	color: #e4e3e8;
+}
+
+.header_menu {
+	width: 699px;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+
+.header_menu a {
+	text-decoration: none;
+	padding: 0 20px;
+	border-left: 1px solid #e4e3e8;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.header_menu a.no_border {
+	border-left: none;
+}
+
+.header_menu a:hover {
+	color: #837c9a;
+}
+
+/* LEFT NAV */
+
+#left_nav h2 {
+	margin: 0;
+	font-size: 24px;
+}
+
+.img_thumb {
+	width: 50px;
+	height: 50px;
+}
+
+.profile_frame {
+	width: 230px;
+	height: 260px;
+	background: black;
+	border: 1px solid #403F44;
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.profile_label_image {
+	width: 33px;
+	height: 27px;
+	margin: 0px;
+	margin-left:4px;
+
+}
+.active-dstyle{ 
+
+filter: drop-shadow(0px 2px 7px #0fa);
+}
+.neon-object {
+  /* Set the object's color to match the glow for a seamless look */
+  color: #37ff00; 
+  background-color: #37ff00; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+  filter: drop-shadow(5px 5px 80px #0fa); 
+  /* Create the multi-layered neon glow effect */
+  /*  box-shadow: */
+    /*0 0 5px #37ff00,*/   /* Inner, sharp glow */
+   /* 0 0 15px #37ff00, */ /* Medium glow */
+   /* 0 0 30px #37ff00, */ /* Larger glow */
+   /* 0 0 60px #37ff00; */ /* Widest, soft glow */
+}
+.frosted-box {
+  /* The frosted effect */
+  background: rgba(255, 255, 255, 0.1); /* Light tint for "frost" */
+
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+    backdrop-filter: blur(10px);
+  
+  /* Styling for over black */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  
+  /* Ensure it sits on top */
+  position: relative;
+}
+.profile_picture {
+	width: 210px;
+	height: 240px;
+	margin: 0;
+	background: url(/images/self_.jpg) center /210px no-repeat;
+
+}
+
+.profile_picture_notallow {
+	width: 210px;
+	height: 240px;
+	margin: 0;
+	background: url(/images/hightech_unknown.jpg) center /210px no-repeat;
+}
+
+.hello_content,
+.contact_details_content {
+	margin-top: 25px;
+}
+
+.hello_content {
+	width: 230px;
+}
+
+.contact_details_content h2+p.purple {
+	margin-top: 10px;
+}
+
+.contact_details_content p {
+	margin: 0;
+}
+
+.contact_details_content p.purple {
+	margin-top: 25px;
+}
+
+.send_message_button,
+.special_button {
+	margin-top: 25px;
+	display: block;
+	background-color: #48da4f;
+	width: 230px;
+	height: 50px;
+	position: relative;
+	z-index: 1;
+}
+
+.cut1:after {
+	content: "";
+	position: absolute;
+	bottom: -19px;
+	left: -20px;
+	width: 30px;
+	height: 30px;
+	z-index: 9;
+	background: url(images/black_twill.png) repeat;
+	transform: rotate(45deg);
+}
+
+.cut2:before {
+	content: "";
+	position: absolute;
+	top: -19px;
+	right: -20px;
+	width: 30px;
+	height: 30px;
+	z-index: 9;
+	background: url(images/black_twill.png) repeat;
+	transform: rotate(45deg);
+}
+
+.content {
+	text-align: center;
+	color: #04080b;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	font: 18px 'Lato', Arial, sans-serif;
+	margin: 0;
+	padding: 16px 0 0;
+	top: -4px;
+	bottom: 10px;
+	border-top: 1px solid #403F44;
+	border-bottom: 1px solid #403F44;
+}
+
+.content:hover {
+	color: #48da4f;
+}
+
+.send_message_button:hover,
+.special_button:hover {
+	background-color: #2f3238;
+}
+
+.get_social_content {
+	margin-top: 15px;
+}
+
+.get_social_content h2 {
+	margin-bottom: 8px;
+}
+
+.social_icons {
+	margin-left: -8px;
+}
+
+.social_icons a {
+	font-size: 35px;
+	text-decoration: none;
+	color: #58595a;
+	padding: 0;
+	padding: 0 5px;
+	border-color: #09ed145f;
+     
+}
+
+.social_icons a span.invisible {
+	background: #7d8281;
+	display: none;
+}
+
+.social_icons .linkedin:hover {
+	background: #007bb6;
+	color: #fff;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	
+}
+
+.social_icons .github:hover {
+	background: #007bb6;
+	color: #fff;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.social_icons .atsqa:hover {
+	background: #007bb6;
+	color: #fff;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.social_icons .emailme:hover {
+	background: #007bb6;
+	color: #fff;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+}
+
+/* Profile Content */
+
+.profile_quote {
+	position: relative;
+	/* margin-left: 5px; */
+}
+
+.profile_quote p {
+	font-size: 17px;
+	width: 455px;
+}
+
+.profile_quote .entypo-quote {
+	color: #3d3a41;
+	font-size: 80px;
+	font-style: normal;
+	position: absolute;
+	top: -20px;
+	right: 70px;
+	cursor: default;
+}
+
+.philosophy_content {
+	margin-top: 20px;
+}
+
+.philosophy_content p {
+	margin: 0;
+	width: 370px;
+	float: left;
+}
+
+.philosophy_content ul {
+	float: left;
+	padding-left: 40px;
+}
+#imgTrig:hover+iframe {
+	display: block;
+	width: 700px;
+	height: 650px;
+	opacity: 1;
+	transition: opacity 1.5s linear;
+}
+
+#btnDiv {
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	font-size: small;
+}
+
+.collapsible {
+	background-color: #7a7979d8;
+	color: #48DA9B;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: #48DA9B;
+	outline: #48DA9B;
+	outline-style: groove;
+	border-width: 5px;
+	text-align: center;
+	font-size: 20px;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+	background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.old_content {
+	padding: 0 18px;
+	/*overflow: hidden;
+		background-color: #f1f1f1;*/
+	background: url(images/black_twill.png) repeat;
+	padding-left: 15px;
+	display: none;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 1120px) and (min-width: 769px) {
+	#header {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header_logotype_container {
+		order: 1;
+		width: 100%;
+		height: auto;
+		float: none;
+		border-right: none;
+		border-bottom: 1px solid #403F44;
+		text-align: center;
+		padding-bottom: 10px;
+        margin:0px;
+	}
+
+	.header_menu_container {
+		order: 0;
+		width: 100%;
+		height: auto;
+		float: none;
+		display: contents;
+      text-align:center; 
+	}
+
+	#header .clear {
+		display: none;
+	}
+
+
+	.header_menu {
+		order: 2;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+		padding-top: 12px;
+	}
+
+	.header_menu li {
+		float: none;
+		display: inline-block;
+		margin-bottom: 8px;
+	}
+
+	.header_menu a {
+		display: inline-block;
+		padding: 6px 12px;
+	}
+
+	.logotype_name,
+	.logotype_occupation {
+		text-align: center;
+		padding-left: 0;
+	}
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+	.main-content {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	#left_col {
+		flex: none;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	#content_container {
+		flex: none;
+		width: 100%;
+		border-left: none;
+		border-top: 1px solid #403F44;
+	}
+
+	#header {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	.header_logotype_container {
+		order: 1;
+		width: 100%;
+		float: none;
+		border-right: none;
+		border-bottom: 1px solid #403F44;
+		height: auto;
+      text-align:center;
+	}
+
+	.header_menu_container {
+		order: 0;
+		width: 100%;
+		float: none;
+		height: auto;
+		display: contents;
+      text-align:center;
+	}
+
+	.logotype_name {
+		margin: 20px 0 0;
+		text-align: center;
+	}
+
+	.logotype_occupation {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	.header_menu_container ul {
+		text-align: center;
+	}
+
+	#header .clear {
+		display: none;
+	}
+
+	.header_menu_container .horizontal_list li {
+		float: none;
+		display: inline-block;
+	}
+
+	.download_print_buttons {
+		order: 0;
+		float: none;
+		width: fit-content;
+		max-width: calc(100% - 24px);
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 8px;
+		padding: 10px 12px;
+		margin: 0 auto 10px;
+		background: #1d1f22;
+		border: 1px solid #403F44;
+		border-radius: 16px;
+	}
+
+
+	.header_menu {
+		order: 2;
+		width: 100%;
+		margin-top: 0;
+		margin-left: 0;
+		text-align: center;
+		padding: 12px 0 0;
+	}
+
+	.header_menu li {
+		margin-bottom: 8px;
+	}
+
+	.header_menu a {
+		display: inline-block;
+		padding: 6px 12px;
+	}
+
+
+	.horizontal_line {
+		width: calc(100% - 24px);
+	}
+
+	.profile_frame,
+	.hello_content,
+	.contact_details_content,
+	.get_social_content,
+	.send_message_button,
+	.special_button {
+		width: min(100%, 320px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact_details_content p,
+	.contact_details_content h2,
+	.hello_content,
+	.get_social_content {
+		text-align: center;
+	}
+
+	.social_icons {
+		margin-left: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+}
