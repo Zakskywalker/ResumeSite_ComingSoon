@@ -1,4 +1,80 @@
 /* Utils */
+.glow-border {
+    width: 252px;
+    height: 350px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    background-color: black; /* Background color for contrast */
+    animation: glow 1.5s infinite alternate; /* Animation for glowing effect */
+}
+
+@keyframes glow {
+    0% {
+box-shadow: 
+    0 0 5px #ffffff,   /* Layer 1: Tight white inner glow */
+    0 0 10px #ffffff,  /* Layer 2: Medium white glow */
+    0 0 15px #03f013,  /* Layer 3: Soft chartreuse-lime glow */
+    0 0 20px #03f013;  /* Layer 4: Wide chartreuse-lime glow */    }
+    100% {
+		box-shadow: 
+    0 0 10px #ffffff,   /* Layer 1: Tight white inner glow */
+    0 0 20px #ffffff,  /* Layer 2: Medium white glow */
+    0 0 30px #ecedea,  /* Layer 3: Soft chartreuse-lime glow */
+    0 0 40px #17eb03;  /* Layer 4: Wide chartreuse-lime glow */
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px,#03f013, 0 0 40px #03f013;
+    }
+}
+/* 1. The main container */
+.glow-box2 {
+  position: relative;
+  width: 300px;
+  height: 160px;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden; /* Clips the rotating light to the box shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. The "Light" (Chase effect) */
+.glow-box2::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(transparent, transparent, transparent, lime);
+    animation: rotate var(--chase-duration, 4s) linear infinite;
+}
+
+/* 3. The Inner Mask (The border's thickness) */
+.glow-box2::after {
+  content: '';
+  position: absolute;
+  inset: 4px; /* This defines the border thickness */
+  background: transparent; /* Remove the solid fill so only the chase remains */
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.glow-box2 > * {
+  position: relative;
+  z-index: 3;
+}
+
+.glow-box2::before {
+  z-index: 1;
+}
+
+/* 4. Animation logic */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .scrollable-container {
 	height: 50px;
 	/* Set a fixed height */
@@ -263,10 +339,6 @@ li:before {
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto 10px;
-}
-
-	width: 100%;
-	height: 60px;
 	border-top: 1px solid #403F44;
 }
 
